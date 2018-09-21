@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="utf-8">
+   <title>Device</title>
+</head>
+<body>
+	<header class="header">
+		<a class="header-logo">
+			<img src="http://placehold.it/150x100" alt="Логотип Device">
+		</a>
+		<div class="sub-navigation">
+			<form class="header-search">
+				<input type="text" placeholder="Поиск по сайту" />
+			</form>
+			<ul class="user-navigation">
+				<li class="login-link"><a href="#">Валентин Петухов</a></li>
+				<li class="logout-link"><a href="#">Выйти</a></li>
+				<li><a href="#">Сравнить<a></li>
+				<li><a href="#">Корзина<a></li>
+			</ul>
+		</div>
+		<nav class="navigation">
+			<button class="catalog-button" type="button">Каталог товаров</button>
+			<ul class="catalog-list">
+				<li><a href="#">Виртуальная реальность</a></li>
+				<li><a href="#">Фитнес-браслеты</a></li>
+				<li><a href="#">Квадрокоптеры</a></li>
+				<li><a href="#">Моноподы для селфи</a></li>
+				<li><a href="#">Умные часы</a></li>
+				<li><a href="#">Экшн-камеры</a></li>
+			</ul>
+			<ul class="site-navigation">
+				<li><a href="#">Доставка<a></li>
+				<li><a href="#">Гарантия<a></li>
+				<li><a href="#">Контакты<a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<h2>Моноподы для селфи</h2>
+		<ul class="breadcrumb">
+		  <li><a href="#">Главная</a></li>
+		  <li><a href="#">Каталог товаров</a></li>
+		  <li class="active">Моноподы для селфи</li> 
+		</ul>
+		<div class="catalog-filter">
+			<div class="catalog-sorting">
+				<p class="catalog-header">Фильтр:</p>
+			</div>
+			<div class="catalog-filters">
+				<form method="post" oninput="priceMin.value=price.value">
+					<div class="catalog-filters parameter">
+						<p class="catalog-filters subheader">Стоимость</p>
+						<input type="range" multiple id="price" min="0" max="10000" step="100" />
+						<span>от </span><output name="priceMin">0</output>
+						<span>до </span><output name="priceMax">10000</output>
+					</div>
+					<div class="catalog-filters parameter">
+						<p class="catalog-filters subheader">Цвет</p>
+						<input type="checkbox" name="color" id="colorChoice1" value="black" checked /><label for="colorChoice1">Черный</label>
+						<input type="checkbox" name="color" id="colorChoice2" value="white" /><label for="colorChoice2">Белый</label>
+						<input type="checkbox" name="color" id="colorChoice3" value="blue" checked /><label for="colorChoice3">Синий</label>
+						<input type="checkbox" name="color" id="colorChoice4" value="red" checked /><label for="colorChoice4">Красный</label>
+						<input type="checkbox" name="color" id="colorChoice5" value="pink" /><label for="colorChoice5">Розовый</label>
+					</div>
+					<div class="catalog-filters parameter">
+						<p class="catalog-filters subheader">Bluetooth</p>
+						<input type="radio" name="bluetooth" id="bluetoothChoice1" value="bluetoothYes" checked /><label for="bluetoothChoice1">Есть</label>
+						<input type="radio" name="bluetooth" id="bluetoothChoice2" value="bluetoothNo" /><label for="bluetoothChoice2">Нет</label>
+					</div>
+					<button class="" type="submit">Показать</button>
+				</form>
+			</div>
+		</div>
+		<div class="catalog-container">
+			<div class="catalog-sorting">
+				<p class="catalog-header">Сортировка:</p>
+				<input type="radio" name="sorting" id="sortingChoice1" value="price" checked /><label for="sortingChoice1">По цене</label>
+				<input type="radio" name="sorting" id="sortingChoice2" value="type" /><label for="sortingChoice2">По типу</label>
+				<input type="radio" name="sorting" id="sortingChoice3" value="popularity" /><label for="sortingChoice3">По популярности</label>
+				<ul class="sorting-buttons">
+					<li><button class="sorting-button"></button></li>
+					<li><button class="sorting-button"></button></li>
+				</ul>
+			</div>
+			<div class="catalog-results">
+				<div class="catalog-item">
+					<a href="#"><img src="http://placehold.it/150x100" alt="Любительская селфи-палка"></a>
+					<a href="#"><h3>Любительская селфи-палка</h3></a>
+					<p class="price">500 руб.</p>
+				</div>
+				<div class="catalog-item">
+					<a href="#"><img src="http://placehold.it/150x100" alt="Профессиональная селфи-палка"></a>
+					<a href="#"><h3>Профессиональная селфи-палка</h3></a>
+					<p class="price">1 500 руб.</p>
+				</div>
+				<div class="catalog-item">
+					<a href="#"><img src="http://placehold.it/150x100" alt="Непотопляемая селфи-палка"></a>
+					<a href="#"><h3>Непотопляемая селфи-палка</h3></a>
+					<p class="price">2 500 руб.</p>
+				</div>
+				<div class="catalog-item">
+					<span class="catalog-item-icon">NEW</span>
+					<a href="#"><img src="http://placehold.it/150x100" alt="Селфи-палка Следуй за мной"></a>
+					<a href="#"><h3>Селфи-палка "Следуй за мной"</h3></a>
+					<p class="price">4 900 руб.</p>
+				</div>
+				</ul>
+				<ul class="pagination">
+			      <li class="page-item">
+			      	<a class="page-link" href="#">Назад</a>
+				  </li>
+				  <li class="page-item">
+				    <a class="page-link" href="#">1</a>
+				  </li>
+				  <li class="page-item">
+				    <a class="page-link" href="#">2</a>
+				  </li>
+				  <li class="page-item">
+				    <a class="page-link" href="#">3</a>
+				  </li>
+				  <li class="page-item">
+				    <a class="page-link" href="#">Вперед</a>
+				  </li>
+			    </ul>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="footer-sub-nav">
+			<a class="footer-logo"><img src="http://placehold.it/150x100" alt="Логотип Device"></a>
+			<ul class="footer-user-nav">
+				<li class="login-link"><a href="#">Валентин Петухов</a></li>
+				<li class="logout-link"><a href="#">Выйти</a></li>
+				<li><a href="#">Сравнить<a></li>
+				<li><a href="#">Корзина<a></li>
+			</ul>
+		</div>
+		<div class="footer-main-nav">
+			<p>г.Москва, ул. Строителей, 15</p>
+			<ul class="site-navigation">
+				<li><a href="#">Доставка<a></li>
+				<li><a href="#">Гарантия<a></li>
+				<li><a href="#">Контакты<a></li>
+			</ul>
+			<a href="tel:+7495959595">Тел.: +7 (495) 495-95-95</a>
+		</div>
+		<div class="footer-links">
+			<ul class="social-icons">
+				<li>
+					<a href="#"><img src="http://placehold.it/150x100"></a>
+				</li>
+				<li>
+					<a href="#"><img src="http://placehold.it/150x100"></a>
+				</li>
+				<li>
+					<a href="#"><img src="http://placehold.it/150x100"></a>
+				</li>
+			</ul>
+			<a class="footer-logo-mini" href="#"><img src="http://placehold.it/150x100" alt="Логотип Device"></a>
+		</div>
+	</footer>
+</body>	
+</html>
