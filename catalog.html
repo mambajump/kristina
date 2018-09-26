@@ -38,11 +38,11 @@
 		</nav>
 	</header>
 	<main class="container">
-		<h2>Моноподы для селфи</h2>
-		<ul class="breadcrumb">
-		  <li><a href="#">Главная</a></li>
-		  <li><a href="#">Каталог товаров</a></li>
-		  <li class="active">Моноподы для селфи</li> 
+		<h1>Моноподы для селфи</h1>
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Каталог товаров</a></li>
+			<li class="active">Моноподы для селфи</li> 
 		</ul>
 		<div class="catalog-filter">
 			<div class="catalog-sorting">
@@ -76,54 +76,71 @@
 		<div class="catalog-container">
 			<div class="catalog-sorting">
 				<p class="catalog-header">Сортировка:</p>
-				<input type="radio" name="sorting" id="sortingChoice1" value="price" checked /><label for="sortingChoice1">По цене</label>
-				<input type="radio" name="sorting" id="sortingChoice2" value="type" /><label for="sortingChoice2">По типу</label>
-				<input type="radio" name="sorting" id="sortingChoice3" value="popularity" /><label for="sortingChoice3">По популярности</label>
 				<ul class="sorting-buttons">
-					<li><button class="sorting-button"></button></li>
-					<li><button class="sorting-button"></button></li>
+					<li><button id="sortingChoice1">По цене</button></li>
+					<li><button id="sortingChoice2">По типу</button></li>
+					<li><button id="sortingChoice3">По популярности</button></li>
+				</ul>
+				<ul class="sorting-buttons arrows">
+					<li><button id="sortingUp"></button></li>
+					<li><button id="sortingDown"></button></li>
 				</ul>
 			</div>
 			<div class="catalog-results">
 				<div class="catalog-item">
 					<a href="#"><img src="http://placehold.it/150x100" alt="Любительская селфи-палка"></a>
-					<a href="#"><h3>Любительская селфи-палка</h3></a>
+					<a href="#"><h2>Любительская селфи-палка</h2></a>
 					<p class="price">500 руб.</p>
+					<div class="hidden">
+						<button>В корзину</button>
+						<button>Добавить к сравнению</button>
+					</div>
 				</div>
 				<div class="catalog-item">
 					<a href="#"><img src="http://placehold.it/150x100" alt="Профессиональная селфи-палка"></a>
-					<a href="#"><h3>Профессиональная селфи-палка</h3></a>
+					<a href="#"><h2>Профессиональная селфи-палка</h2></a>
 					<p class="price">1 500 руб.</p>
+					<div class="hidden">
+						<button>В корзину</button>
+						<button>Добавить к сравнению</button>
+					</div>
 				</div>
 				<div class="catalog-item">
 					<a href="#"><img src="http://placehold.it/150x100" alt="Непотопляемая селфи-палка"></a>
-					<a href="#"><h3>Непотопляемая селфи-палка</h3></a>
+					<a href="#"><h2>Непотопляемая селфи-палка</h2></a>
 					<p class="price">2 500 руб.</p>
+					<div class="hidden">
+						<button>В корзину</button>
+						<button>Добавить к сравнению</button>
+					</div>
 				</div>
 				<div class="catalog-item">
 					<span class="catalog-item-icon">NEW</span>
 					<a href="#"><img src="http://placehold.it/150x100" alt="Селфи-палка Следуй за мной"></a>
-					<a href="#"><h3>Селфи-палка "Следуй за мной"</h3></a>
+					<a href="#"><h2>Селфи-палка "Следуй за мной"</h2></a>
 					<p class="price">4 900 руб.</p>
+					<div class="hidden">
+						<button>В корзину</button>
+						<button>Добавить к сравнению</button>
+					</div>
 				</div>
-				</ul>
 				<ul class="pagination">
-			      <li class="page-item">
-			      	<a class="page-link" href="#">Назад</a>
-				  </li>
-				  <li class="page-item">
-				    <a class="page-link" href="#">1</a>
-				  </li>
-				  <li class="page-item">
-				    <a class="page-link" href="#">2</a>
-				  </li>
-				  <li class="page-item">
-				    <a class="page-link" href="#">3</a>
-				  </li>
-				  <li class="page-item">
-				    <a class="page-link" href="#">Вперед</a>
-				  </li>
-			    </ul>
+					<li class="page-item">
+						<a class="page-link" href="#">Назад</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">Вперед</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</main>
