@@ -10,9 +10,9 @@
 			<img src="img/logo.svg" alt="Device">
 		</a>
 		<div class="sub-navigation">
-			<form class="header-search">
+			<form method="post" action="" class="header-search">
 				<button id="search-button" type="button"></button>
-				<input type="text" placeholder="Поиск по сайту" />
+				<input type="text" placeholder="Поиск по сайту"/>
 			</form>
 			<ul class="user-navigation">
 				<li class="login-link">
@@ -70,27 +70,33 @@
 				<p class="catalog-header">Фильтр:</p>
 			</div>
 			<div class="catalog-filters">
-				<form method="post" oninput="priceMin.value=price.value">
+				<form method="post" action="" oninput="priceMin.value=price.value">
 					<div class="catalog-filters parameter">
-						<p class="catalog-filters subheader">Стоимость</p>
-						<input type="range" multiple id="price" min="0" max="10000" step="100" />
-						<span>от </span><output name="priceMin">0</output>
-						<span>до </span><output name="priceMax">10000</output>
+						<fieldset class="catalog-filters subheader">
+						<legend>Стоимость</legend>
+							<input type="range" multiple id="price" min="0" max="10000" step="100" />
+							<span>от </span><output name="priceMin">0</output>
+							<span>до </span><output name="priceMax">10000</output>
+						</fieldset>
 					</div>
 					<div class="catalog-filters parameter">
-						<p class="catalog-filters subheader">Цвет</p>
-						<input type="checkbox" name="color" id="colorChoice1" value="black" checked /><label for="colorChoice1">Черный</label>
-						<input type="checkbox" name="color" id="colorChoice2" value="white" /><label for="colorChoice2">Белый</label>
-						<input type="checkbox" name="color" id="colorChoice3" value="blue" checked /><label for="colorChoice3">Синий</label>
-						<input type="checkbox" name="color" id="colorChoice4" value="red" checked /><label for="colorChoice4">Красный</label>
-						<input type="checkbox" name="color" id="colorChoice5" value="pink" /><label for="colorChoice5">Розовый</label>
+						<fieldset class="catalog-filters subheader">
+						<legend>Цвет</legend>
+							<input type="checkbox" name="color" id="colorChoice1" value="black" checked /><label for="colorChoice1">Черный</label>
+							<input type="checkbox" name="color" id="colorChoice2" value="white" /><label for="colorChoice2">Белый</label>
+							<input type="checkbox" name="color" id="colorChoice3" value="blue" checked /><label for="colorChoice3">Синий</label>
+							<input type="checkbox" name="color" id="colorChoice4" value="red" checked /><label for="colorChoice4">Красный</label>
+							<input type="checkbox" name="color" id="colorChoice5" value="pink" /><label for="colorChoice5">Розовый</label>
+						</fieldset>
 					</div>
 					<div class="catalog-filters parameter">
-						<p class="catalog-filters subheader">Bluetooth</p>
-						<input type="radio" name="bluetooth" id="bluetoothChoice1" value="bluetoothYes" checked /><label for="bluetoothChoice1">Есть</label>
-						<input type="radio" name="bluetooth" id="bluetoothChoice2" value="bluetoothNo" /><label for="bluetoothChoice2">Нет</label>
+						<fieldset class="catalog-filters subheader">
+							<legend>Bluetooth</legend>
+							<input type="radio" name="bluetooth" id="bluetoothChoice1" value="bluetoothYes" checked /><label for="bluetoothChoice1">Есть</label>
+							<input type="radio" name="bluetooth" id="bluetoothChoice2" value="bluetoothNo" /><label for="bluetoothChoice2">Нет</label>
+						</fieldset>
 					</div>
-					<button type="submit">Показать</button>
+					<button type="submit" value="submit">Показать</button>
 				</form>
 			</div>
 		</div>

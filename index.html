@@ -10,7 +10,7 @@
 			<img src="img/logo.svg" alt="Device">
 		</a>
 		<div class="sub-navigation">
-			<form class="header-search">
+			<form method="post" action="" class="header-search">
 				<button id="search-button" type="button"></button>
 				<input type="text" placeholder="Поиск по сайту">
 			</form>
@@ -223,7 +223,7 @@
 			<div class="contacts">
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-				<img src="img/map.jpg" alt="Карта">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A18b27c574b2a5c9cb8341693886ceda038e05566b6f0b82874ce2fea2733d3a2&amp;source=constructor" width="560" height="240" frameborder="0"></iframe>
 				<button type="button">Напишите нам</button>
 			</div>
 		</div>
@@ -271,6 +271,21 @@
 				</li>
 			</ul>
 			<a class="footer-logo-mini" href="#"><img src="img/logo-mini.svg" alt="Device"></a>
+		</div>
+		<div class="pop-up hidden">
+			<form method="post" action="" class="pop-up-write-us">
+				<label>Ваше имя:
+					<input type="text" name="user" placeholder="Имя Фамилия" required>
+				</label>
+ 				<label>Ваш e-mail:
+ 					<input type="email" name="e-mail" placeholder="email@example.com" required>
+ 				</label>
+ 				<label>Текст письма:
+ 					<textarea name="message" placeholder="В свободной форме" required></textarea>
+ 				</label>
+				<button type="submit" value="submit">Отправить</button>
+				<button type="button">Закрыть</button>
+			</form>
 		</div>
 	</footer>
 </body>	
