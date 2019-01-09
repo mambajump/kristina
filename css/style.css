@@ -1,22 +1,38 @@
 @font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy Light'), 
-    	local('Gilroy-Light'), 
-    	url('Gilroylight.woff2') format('woff2'), 
-    	url('Gilroylight.woff') format('woff'), 
-    	url('Gilroylight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'Gilroy';
+	src: url('../fonts/gilroy/Gilroy Light'), 
+		url('../fonts/gilroy/Gilroy-Light'),
+		url('../fonts/gilroy/web/Gilroylight.woff2') format('woff2'), 
+		url('../fonts/gilroy/web/Gilroylight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: local('Gilroy ExtraBold'), 
-    	local('Gilroy-ExtraBold'), 
-    	url('Gilroyextrabold.woff2') format('woff2'), 
-    	url('Gilroyextrabold.woff') format('woff'), 
-    	url('Gilroyextrabold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+    src: url('../fonts/gilroy/Gilroy ExtraBold'), 
+		url('../fonts/gilroy/Gilroy-ExtraBold'),
+		url('../fonts/gilroy/web/Gilroyextrabold.woff2') format('woff2'), 
+		url('../fonts/gilroy/web/Gilroyextrabold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open_sans/Open Sans Regular'), 
+		url('../fonts/open_sans/Open Sans-Regular'),
+		url('../fonts/open_sans/web/OpenSansregular.woff') format('woff2'), 
+		url('../fonts/open_sans/web/OpenSansregular.woff') format('woff'), 
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open_sans/Open Sans Light'), 
+		url('../fonts/open_sans/Open Sans-Light'),
+		url('../fonts/open_sans/web/OpenSanslight.woff') format('woff2'), 
+		url('../fonts/open_sans/web/OpenSanslight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 
 body {
@@ -34,7 +50,23 @@ a {
 	text-decoration: none;
 }
 
-/*index-styles*/
+/*page: index*/
+
+.header {
+	background-color: #f7e296;
+}
+
+.header__logo:hover {
+	opacity: .6;
+}
+
+.header__logo:active {
+	opacity: .3;
+}
+
+.search {
+	display: flex;
+}
 
 .search__input {
 	font-family: "Open Sans", sans-serif;
@@ -46,6 +78,7 @@ a {
 	color: #000000;
 	opacity: .3;
 	border: none;
+	background-color: transparent;
 }
 
 .search__input:hover {
@@ -58,13 +91,10 @@ a {
 	width: 441px;
 }
 
-.search:before {
-	background-image: url(img/search.svg);
-	background-size: 16px 16px;
-	display: block;
-  	content: "";
-	width: 16px;
-	height: 16px;
+.search::before {
+  	content: url(../img/search.svg);
+  	width: 100%;
+  	height: 100%;
 }
 
 .search__btn {
@@ -76,15 +106,16 @@ a {
 	border: 2px solid #000000;
 	width: 85px;
 	height: 49px;
+	background-color: transparent;
 }
 
 .search__btn:hover {
-	background-color: #000000;
+	background-color: #000000 ;
 	color: #ffffff;
 }
 
-.search__btn:active {
-	color: #747474;
+.search__btn span:active {
+	opacity: .3;
 }
 
 .catalog__btn {
@@ -95,27 +126,26 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	border: none;
+	display: flex;
+	background-color: transparent;
 }
 
-.catalog__btn:after {
-	background-image: url(img/plus.svg);
-	background-size: 16px 16px;
-	display: block;
-  	content: "";
-	width: 16px;
-	height: 16px;
+.catalog__btn::after {
+  	content: url(../img/plus.svg);
+  	width: 100%;
+  	height: 100%;
 	opacity: .3;
 }
 
-.catalog__btn:hover {
+.catalog__btn span:hover {
 	opacity: .6;
 }
 
-.catalog__btn:active {
+.catalog__btn span:active {
 	opacity: .3;
 }
 
-.catalog__list {
+.catalog__item {
 	list-style: none;
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
@@ -124,19 +154,19 @@ a {
 	letter-spacing: 0.1em;
 }
 
-.catalog__list a {
+.catalog__item a {
 	color: #000000;
 }
 
-.catalog__list a:hover {
+.catalog__item a:hover {
 	opacity: .6;
 }
 
-.catalog__list a:active {
+.catalog__item a:active {
 	opacity: .3;
 }
 
-.user__link {
+.header__link {
 	list-style: none;
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
@@ -145,54 +175,45 @@ a {
 	letter-spacing: 0.1em;
 }
 
-.header__nav .user__link a {
+.header__link a {
 	color: #000000;
 }
 
-.user__link--logout {
+.header__link--logout {
 	opacity: .3;
 }
 
-.user__link--login:before {
-	background-image: url(img/user.svg);
-	background-size: 13px 12px;
-	display: block;
-  	content: "";
+.header__link--login:before {
+	content: url(../img/user.svg);
 	width: 13px;
 	height: 12px;
 }
 
-.user__link--compare:before {
-	background-image: url(img/compare.svg);
-	background-size: 13px 12px;
-	display: block;
-  	content: "";
+.header__link--compare:before {
+	content: url(../img/compare.svg);
 	width: 13px;
 	height: 12px;
 }
 
-.user__link--cart:before {
-	background-image: url(img/cart.svg);
-	background-size: 13px 12px;
-	display: block;
-  	content: "";
-	width: 13px;
-	height: 12px;
+.header__link--cart:before {
+	content: url(../img/cart.svg);
+	width: 100%;
+	height: 100%;
 }
 
-.user__link:hover {
+.header__link:hover {
 	opacity: .6;
 }
 
-.user__link:active {
+.header__link:active {
 	opacity: .3;
 }
 
-.main__link {
+.mainnav {
 	list-style: none;
 }
 
-.main__link a {
+.mainnav__link {
 	font-family: "Gilroy", sans-serif;
 	font-size: 18px;
 	line-height: 24px;
@@ -200,6 +221,14 @@ a {
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: #000000;
+}
+
+.mainnav__link:hover {
+	opacity: .6;
+}
+
+.mainnav__link:active {
+	opacity: .3;
 }
 
 .slider__nav {
@@ -211,7 +240,7 @@ a {
   	content: "";
 	width: 12px;
 	height: 12px;
-	background-image: url(img/slider-button-empty.svg);
+	background-image: url(/img/slider-button-empty.svg);
 	background-repeat: no-repeat;
 	background-size: 12px 12px;
 	border: none;
@@ -529,14 +558,6 @@ a {
 	background-color: #464646;
 }
 
-.logo__big:hover {
-	opacity: .6;
-}
-
-.logo__big:active {
-	opacity: .3;
-}
-
 .main__contact {
 	color: #ffffff;
 }
@@ -548,14 +569,6 @@ a {
 .footer__nav .user__link a {
 	opacity: .7;
 	color: #ffffff;
-}
-
-.main__link a:hover {
-	opacity: .6;
-}
-
-.main__link a:active {
-	opacity: .3;
 }
 
 .social__link {
@@ -606,7 +619,7 @@ a {
 	opacity: .3;
 }
 
-/*catalog-styles*/
+/*page: catalog*/
 
 h1 {
 
